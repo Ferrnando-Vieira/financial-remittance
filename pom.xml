@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>br.com</groupId>
 	<artifactId>financial-remittance-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<name>financial-remittance-service</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Service for Financial Remittance between clients</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
