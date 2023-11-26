@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  postgres:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: "financial-remittance-postgres"
+    container_name: "postrgesDB"
+    environment:
+      POSTGRES_DB: "remittance"
+      POSTGRES_USER: "remittAdm"
+      POSTGRES_PASSWORD: "@dm1nR3m1tt-p0stGr3sSql"
+      PGDATA: "/data/postgres-dev"
+    volumes:
+      - dbdev:/data/postgres-dev-env
+    ports:
+      - "5432:5432"
+    restart: always
+volumes:
+  dbdev:
+    driver: local
