@@ -11,12 +11,12 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class User {
-
     @Id
     private Long userId;
+    
     private String username;
     private String password;
     private boolean isEnabled;
     private boolean isLegalEntity;
-    private LocalDateTime dtHourCreation;    
+    private LocalDateTime dtHourCreation;
 }

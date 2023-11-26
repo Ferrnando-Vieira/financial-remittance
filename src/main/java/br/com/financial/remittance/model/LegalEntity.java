@@ -4,6 +4,8 @@ import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -16,6 +18,10 @@ public class LegalEntity {
 
     private String fullName;
     private String document;
-    private DocumentType documentType;
     private LocalDate dtLegalEntityCreation;
+    
+    @ManyToOne
+    private DocumentType docTypeId;
+    @OneToOne
+    private User userId;
 }

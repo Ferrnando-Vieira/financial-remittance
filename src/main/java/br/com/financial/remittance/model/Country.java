@@ -2,6 +2,7 @@ package br.com.financial.remittance.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,5 +15,7 @@ public class Country {
 
     private String name;
     private String phoneCode;
+
+    @ManyToOne
     private Currency currency;
 }

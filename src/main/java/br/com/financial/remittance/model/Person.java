@@ -4,6 +4,8 @@ import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToOne;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -18,8 +20,12 @@ public class Person {
     private String lastName;
     private String email;
     private String phone;
-    private String celphone;
+    private String cellphone;
     private LocalDate birthDate;
     private String document;
-    private DocumentType documentType;
+
+    @OneToOne
+    private User userId;
+    @ManyToOne
+    private DocumentType docTypeId;
 }
